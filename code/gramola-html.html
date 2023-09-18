@@ -2,17 +2,21 @@
     <html lang="en">
         <head>
             <meta charset="UTF-8">
+            <link rel="icon" type="image/png" href="img/logo/logo-gramola.png">
             <link rel="stylesheet" href="css/gramola-css.css">
+            <script src="js/gramola-js.js"></script>
             
-            <title>GRAMOLA - Adria Garcia</title>
+            <title>GRAMOLA 2.0</title>
             
         </head>
         <body>
-            <!-- La secció <body> conté el contingut principal de la pàgina web.-->>
+            <!-- La secció <body> conté el contingut principal de la pàgina web.-->
+            
+            <!--Vinculació del JavaScript amb l'HTML-->
             <header>
-                <!--L'element <header> conté elements que apareixen a la part superior de la pàgina web-->>
+                <!--L'element <header> conté elements que apareixen a la part superior de la pàgina web-->
                 <div class="logo">
-                    <img src="img/logo-gramola.png" class="img-logo">
+                    <img src="img/logo/logo-gramola.png" class="img-logo">
                 </div>
                 <div class="perfil"></div>
                 <div class="navegador"></div>
@@ -28,12 +32,13 @@
             </nav>
 
             <footer class="footer">
+                <!--L'element <footer> conté informació que apareix a la part inferior de la pàgina web-->
                 <div class="reproductor">
                     <div class="icones">
-                        <img src="img/icone-aleatori.png" class="icone-aleatori">
-                        <img src="img/icone-enrere.png" class="icone-enrere">
-                        <img src="img/icone-pausa.png" class="icone-pausa">
-                        <img src="img/icone-avançar.png" class="icone-avançar">
+                        <img onclick="aleatori()" src="img/icones/icone-aleatori.png" class="icone-aleatori" id="hola">
+                        <img onclick="enrere()" src="img/icones/icone-enrere.png" class="icone-enrere">
+                        <img onclick="play()" src="img/icones/icone-play.png" class="icone-play">
+                        <img onclick="avançar()" src="img/icones/icone-avançar.png" class="icone-avançar">
                     </div>
                 </div>
             </footer>
