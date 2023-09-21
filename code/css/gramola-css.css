@@ -82,7 +82,7 @@ header{
     margin-right: 30px;
 }
 
-.icone-play{
+.stop,.start{
     width: 50px;
     height: 50px;
     margin-right: 30px;
@@ -91,15 +91,17 @@ header{
 .icone-avançar{
     width: 50px;
     height: 50px;
+    margin-right: 30px;
 }
 
-.contingut{
-    display: inline-block;
+.icone-parar{
+    width: 45px;
+    height: 45px;
 }
 
 .contingut-principal{
-    display: inline-block;
-    width: 1220px;          
+    float: left;
+    width: 63.5%;          
     height: 640px;
     margin-left: 25px;
     margin-right: 25px;   
@@ -107,7 +109,7 @@ header{
     border-radius: 10px;
     border-color: rgb(201, 4, 255);
     border-style: solid;  
-    box-shadow: 5px 5px; 
+    box-shadow: 5px 5px;
 }
 
 .contingut-secundari{
@@ -125,4 +127,71 @@ header{
     display: flex;
     justify-content: center;
     margin-top: 30px;
+}
+
+.playlist-rap{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    border-color: rgb(201, 4, 255);
+    border-style: solid;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 45px;
+
+    
+}
+
+.playlist-rock{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    border-color: rgb(201, 4, 255);
+    border-style: solid;
+    margin-right: 100px;
+    margin-left: 110px;
+}
+
+.playlist-techno{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    border-color: rgb(201, 4, 255);
+    border-style: solid;
+    margin-top: 25px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.playlist-urbano{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    border-color: rgb(201, 4, 255);
+    border-style: solid;
+    margin-top: 25px;
+    margin-right: 100px;
+    margin-left: 110px;
+}
+
+.audio-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.progress-container {
+    width: 40%;
+    background-color: #ffffff;
+    height: 12px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: rgb(201, 4, 255);
+    border-radius: 5px;
 }

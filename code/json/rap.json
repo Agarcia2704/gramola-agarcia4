@@ -1,0 +1,26 @@
+[
+    {
+        "titol":"4x4",
+        "artista":"Ayax",
+        "url":"../playlist/rap/Ayax-4X4.mp3",
+        "cover":"../img/cover/Ayax-4x4.jpg"
+    },
+    {
+        "titol":"Sprinter",
+        "artista":"Central Cee",
+        "url":"../playlist/rap/CentralCeexDave-Sprinter.mp3",
+        "cover":"../img/cover/CentralCeexDave-Sprinter.jpg"
+    },
+    {
+        "titol":"Tranky Funky",
+        "artista":"Trueno",
+        "url":"../playlist/rap/Trueno-TRANKYFUNKY.mp3",
+        "cover":"../img/cover/trueno-trankyfunky.jpg"
+    },
+    {
+        "titol":"Canguro",
+        "artista":"Wos",
+        "url":"../playlist/rap/Wos-CANGURO.mp3",
+        "cover":"../img/cover/Wos-CANGURO.jpg"
+    }
+]
