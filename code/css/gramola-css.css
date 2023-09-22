@@ -225,3 +225,28 @@ p{
     width: 30%;
     margin-left: 470px;
 }
+
+.text-info{
+    color: white;
+    display: inline;
+    position: absolute;
+}
+
+#cover{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border-color: rgb(201, 4, 255);
+    border-style: solid;
+    margin-top: 14px;
+    margin-left: 20px;
+}
+
+.info{
+    font-size: 20px;
+    width: 200px;
+    display: inline;
+    position: absolute; 
+    margin-top: 50px;
+    margin-left: 25px;
+}

@@ -1,9 +1,10 @@
-
-var x=0;
 var elementoRecargar = document.getElementById('recargar');
         elementoRecargar.addEventListener("click", function () {
           location.reload();
-        });
+});
+
+var x = 0;
+
 var cancion = new Audio();
 const reproductor = document.getElementById("rep");
 const progressBar = document.getElementById("progress");
@@ -71,6 +72,12 @@ function selected () {
     cancion.src = song[x].url
     cancion.play();
     reproductor.src = "img/icones/icone-pausa.png";
+    var titol = document.getElementById("titol");
+    titol.textContent = song[x].titol;
+    var artista = document.getElementById("artista");
+    artista.textContent = (song[x].artista);
+    var cover = document.getElementById("cover");
+    cover.src = song[x].cover;
 };
 
 function next(){

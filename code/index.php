@@ -40,8 +40,10 @@
                     <img src="img/playlists/techno.jpg" class="playlist-techno" id="techno" onclick="techno()">
                     <img src="img/playlists/urbano.jpg" class="playlist-urbano" id="urbano" onclick="urbano()">
                 </div>
-                    
-                    <div class="contingut-secundari">
+                <div class="contingut-secundari">
+                        
+                   
+
                     </div>
                 </div>
             <nav>
@@ -82,6 +84,17 @@
             <footer class="footer">
                 <!--L'element <footer> conté informació que apareix a la part inferior de la pàgina web-->
                 <div class="reproductor">
+
+                
+                    <div class="text-info">
+                        <img src="" alt="" id="cover">
+                        <div class="info">
+                            <span id="titol"></span>
+                            <br>
+                            <span id="artista"></span>
+                        </div>
+                    </div>
+
                     <div class="icones">
                         <img src="img/icones/icone-aleatori.png" class="icone-aleatori" id="aleatori">
                         <img src="img/icones/icone-enrere.png" class="icone-enrere" id="enrere" onclick="back()">
@@ -89,16 +102,19 @@
                         <img src="img/icones/icone-avançar.png" class="icone-avançar" id="avançar" onclick="next()">
                         <img src="img/icones/icone-parar.png" class="icone-parar" id="parar">
                     </div>
-                    <div class="" >
+
+                    <div>
                         <div id="currentTime">0:00</div>
                         <div id="duration">0:00</div>
                     </div>
+
                     <div class="audio-controls">
                     
                         <div class="progress-container">
                             <div class="progress" id="progress"></div>
                            
                         </div>
+                        
                     </div>
                     
                 </div>
