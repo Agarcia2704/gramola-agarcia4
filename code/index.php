@@ -33,27 +33,13 @@
             
                 <div class="contingut">
                 <div class="contingut-principal">
-                    
-                    <a href="index.php?playlist=rap.json">
-                    <img src="img/playlists/rap.jpg" class="playlist-rap">
-                    </a>
-                    <a href="index.php?playlist=rock.json">
-                    <img src="img/playlists/rock.jpg" class="playlist-rock">
-                    </a>
-                    <a href="index.php?playlist=techno.json">
-                    <img src="img/playlists/techno.jpg" class="playlist-techno">
-                    </a>
-                    <a href="index.php?playlist=urbano.json">
-                    <img src="img/playlists/urbano.jpg" class="playlist-urbano">
-                    </a>  
+                    <img src="img/playlists/rap.jpg" class="playlist-rap" id="rap" onclick="rap()">
+                    <img src="img/playlists/rock.jpg" class="playlist-rock" id="rock" onclick="rock()">
+                    <img src="img/playlists/techno.jpg" class="playlist-techno" id="techno" onclick="techno()">
+                    <img src="img/playlists/urbano.jpg" class="playlist-urbano" id="urbano" onclick="urbano()">
                 </div>
                     
                     <div class="contingut-secundari">
-                        <p>
-                        <?php
-                            echo $_GET["playlist"];
-                        ?>
-                        </p>
                     </div>
                 </div>
             <nav>

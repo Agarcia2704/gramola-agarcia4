@@ -8,7 +8,6 @@ let isPlaying = false;
 
 reproductor.addEventListener("click", toggleAudio);
 
-cancion.src = "playlist/urbano/Saiko-Antidepresivos.mp3";
 cancion.addEventListener("timeupdate", updateProgress);
 cancion.addEventListener("loadedmetadata", updateDuration); // Agregamos este evento
 
@@ -53,3 +52,39 @@ parar.addEventListener("click", () => {
     cancion.currentTime = 0; // Torna al inici
     reproductor.src = "img/icones/icone-play.png"; // Cambia l'icone a "Play"
   });
+
+document.getElementById("rap").addEventListener("click", function() {
+    function rap() {
+        cancion.src="playlist/rap/Trueno-TRANKYFUNKY.mp3";
+            cancion.play();
+            reproductor.src="img/icones/icone-pausa.png"
+    }
+    rap();
+});
+
+document.getElementById("rock").addEventListener("click", function() {
+    function rock() {
+        cancion.src="playlist/rock/ACDC-Thunderstruck.mp3";
+            cancion.play();
+            reproductor.src="img/icones/icone-pausa.png";
+        }
+    rock();
+});
+
+document.getElementById("techno").addEventListener("click", function() {
+    function techno() {
+        cancion.src="playlist/techno/TheWhistlers-BrokenTies.mp3";
+            cancion.play();
+            reproductor.src="img/icones/icone-pausa.png";
+    }
+    techno();
+});
+
+document.getElementById("urbano").addEventListener("click", function() {
+    function urbano() {
+        cancion.src="playlist/urbano/Quevedo-Columbia.mp3";
+            cancion.play();
+            reproductor.src="img/icones/icone-pausa.png";
+    }
+    urbano();
+});
