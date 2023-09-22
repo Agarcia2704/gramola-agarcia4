@@ -1,9 +1,11 @@
 <?php
-    $rap = json_decode(file_get_contents("json/rap.json"));
-    $rock = json_decode(file_get_contents("json/rock.json"));
-    $techno = json_decode(file_get_contents("json/techno.json"));
-    $urbano = json_decode(file_get_contents("json/urbano.json"));
+    $rap = file_get_contents("json/rap.json");
+    $rock = file_get_contents("json/rock.json");
+    $techno =file_get_contents("json/techno.json");
+    $urbano = file_get_contents("json/urbano.json");
 ?>
+
+
 
 <!DOCTYPE html>
     <html lang="en">
@@ -23,7 +25,7 @@
             <header>
                 <!--L'element <header> conté elements que apareixen a la part superior de la pàgina web-->
                 <div class="logo">
-                    <img src="img/logo/logo-gramola.png" class="img-logo">
+                    <img src="img/logo/logo-gramola.png" class="img-logo" id="recargar" >
                 </div>
                 <div class="perfil">
                     <p class="form" >Hola, "NOM"</p>
@@ -46,18 +48,51 @@
                 <div class="nav"></div>
             </nav>
 
+
+            <script>
+                var song;
+                function rap(){
+                    song = JSON.parse(<?php echo json_encode($rap)?>);
+                    x = 0;
+                    selected();
+                }
+
+                function rock(){
+                    song = JSON.parse(<?php echo json_encode($rock)?>);
+                    x = 0;
+                    selected();
+                }
+
+                function techno(){
+                    song = JSON.parse(<?php echo json_encode($techno)?>);
+                    x = 0;
+                    selected();
+
+                }
+
+                function urbano(){
+                    song = JSON.parse(<?php echo json_encode($urbano)?>);
+                    x = 0;
+                    selected();
+                }
+
+                
+            </script>
+
             <footer class="footer">
                 <!--L'element <footer> conté informació que apareix a la part inferior de la pàgina web-->
                 <div class="reproductor">
                     <div class="icones">
                         <img src="img/icones/icone-aleatori.png" class="icone-aleatori" id="aleatori">
-                        <img src="img/icones/icone-enrere.png" class="icone-enrere" id="enrere">
+                        <img src="img/icones/icone-enrere.png" class="icone-enrere" id="enrere" onclick="back()">
                         <img src="img/icones/icone-play.png" class="stop" id="rep">
-                        <img src="img/icones/icone-avançar.png" class="icone-avançar" id="avançar">
+                        <img src="img/icones/icone-avançar.png" class="icone-avançar" id="avançar" onclick="next()">
                         <img src="img/icones/icone-parar.png" class="icone-parar" id="parar">
                     </div>
+                    <div class="" >
                         <div id="currentTime">0:00</div>
                         <div id="duration">0:00</div>
+                    </div>
                     <div class="audio-controls">
                     
                         <div class="progress-container">

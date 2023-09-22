@@ -1,6 +1,5 @@
-{
-    "nom": "rock",
-    "cançons": [
+[
+   
         {
             "titol":"Thunderstruck",
             "artista":"ACDC",
@@ -26,4 +25,3 @@
             "cover":"../img/cover/Queen-DontStopMeNow.jpg"
         }
     ]
-}
