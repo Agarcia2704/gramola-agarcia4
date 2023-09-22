@@ -1,26 +1,29 @@
-[
-    {
-        "titol":"Thunderstruck",
-        "artista":"ACDC",
-        "url":"../playlist/rock/ACDC-Thunderstruck.mp3",
-        "cover":"../img/cover/ACDC-thunderstruck.jpg"
-    },
-    {
-        "titol":"It's my life",
-        "artista":"Bon Jovi",
-        "url":"../playlist/rock/BonJovi-ItsMyLife.mp3",
-        "cover":"../img/cover/BonJovi-ItsMyLife.jpg"
-    },
-    {
-        "titol":"Maldito duende",
-        "artista":"Héroes del Silencio",
-        "url":"../playlist/rock/HéroesdelSilencio-Malditoduende.mp3",
-        "cover":"../img/cover/HeroesDelSilencio-MalditoDuende.jpg"
-    },
-    {
-        "titol":"Don't Stop Me Now",
-        "artista":"Queen",
-        "url":"../playlist/rock/Queen-DontStopMeNow.mp3",
-        "cover":"../img/cover/Queen-DontStopMeNow.jpg"
-    }
-]
+{
+    "nom": "rock",
+    "cançons": [
+        {
+            "titol":"Thunderstruck",
+            "artista":"ACDC",
+            "url":"../playlist/rock/ACDC-Thunderstruck.mp3",
+            "cover":"../img/cover/ACDC-thunderstruck.jpg"
+        },
+        {
+            "titol":"It's my life",
+            "artista":"Bon Jovi",
+            "url":"../playlist/rock/BonJovi-ItsMyLife.mp3",
+            "cover":"../img/cover/BonJovi-ItsMyLife.jpg"
+        },
+        {
+            "titol":"Maldito duende",
+            "artista":"Héroes del Silencio",
+            "url":"../playlist/rock/HéroesdelSilencio-Malditoduende.mp3",
+            "cover":"../img/cover/HeroesDelSilencio-MalditoDuende.jpg"
+        },
+        {
+            "titol":"Don't Stop Me Now",
+            "artista":"Queen",
+            "url":"../playlist/rock/Queen-DontStopMeNow.mp3",
+            "cover":"../img/cover/Queen-DontStopMeNow.jpg"
+        }
+    ]
+}

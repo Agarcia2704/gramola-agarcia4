@@ -1,12 +1,16 @@
 const cancion = new Audio();
 const reproductor = document.getElementById("rep");
 const progressBar = document.getElementById("progress");
+let parar = document.getElementById("parar");
+const currentTimeDisplay = document.getElementById("currentTime"); // Agregamos esta línea
+const durationDisplay = document.getElementById("duration"); // Agregamos esta línea
 let isPlaying = false;
 
 reproductor.addEventListener("click", toggleAudio);
 
-cancion.src = "playlist/techno/TheWhistlers-Lapaka.mp3";
+cancion.src = "playlist/urbano/Saiko-Antidepresivos.mp3";
 cancion.addEventListener("timeupdate", updateProgress);
+cancion.addEventListener("loadedmetadata", updateDuration); // Agregamos este evento
 
 function toggleAudio() {
     if (isPlaying) {
@@ -30,4 +34,22 @@ function updateProgress() {
     const duration = cancion.duration;
     const progressWidth = (currentTime / duration) * 100;
     progressBar.style.width = `${progressWidth}%`;
+
+    // Actualiza el tiempo actual de reproducción en formato mm:ss
+    const currentTimeMinutes = Math.floor(currentTime / 60);
+    const currentTimeSeconds = Math.floor(currentTime % 60);
+    currentTimeDisplay.textContent = `${currentTimeMinutes}:${String(currentTimeSeconds).padStart(2, '0')}`;
 }
+
+function updateDuration() {
+    // Obtiene la duración total de la canción en formato mm:ss
+    const durationMinutes = Math.floor(cancion.duration / 60);
+    const durationSeconds = Math.floor(cancion.duration % 60);
+    durationDisplay.textContent = `${durationMinutes}:${String(durationSeconds).padStart(2, '0')}`;
+}
+
+parar.addEventListener("click", () => {
+    cancion.pause();
+    cancion.currentTime = 0; // Torna al inici
+    reproductor.src = "img/icones/icone-play.png"; // Cambia l'icone a "Play"
+  });

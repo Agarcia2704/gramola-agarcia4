@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+
 *{
     margin:0;
     padding:0;
+    font-family: 'Skranji', cursive;
 }
+
 
 body{
     background-color: #3D1F54; /* fons de color de la pàgina */
@@ -38,6 +42,12 @@ header{
     border-style: solid;
     box-shadow: 5px 5px;
   }
+
+.form{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 40px;
+}
 
 .navegador{
     width: 940px;          
@@ -123,6 +133,10 @@ header{
     box-shadow: 5px 5px;
 }
 
+p{
+    color: white;
+}
+
 .icones{
     display: flex;
     justify-content: center;
@@ -178,11 +192,11 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .progress-container {
-    width: 40%;
+    width: 30%;
     background-color: #ffffff;
     height: 12px;
     border-radius: 5px;
@@ -194,4 +208,20 @@ header{
     height: 100%;
     background-color: rgb(201, 4, 255);
     border-radius: 5px;
+}
+
+#currentTime{
+    font-size: 18px;
+    color: #ffffff;
+    display: inline;
+    width: 30%;
+    margin-left: 660px;
+}
+
+#duration{
+    font-size: 18px;
+    color: #ffffff;
+    display: inline;
+    width: 30%;
+    margin-left: 480px;
 }
