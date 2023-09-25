@@ -1,22 +1,25 @@
-var elementoRecargar = document.getElementById('recargar');
-        elementoRecargar.addEventListener("click", function () {
-          location.reload();
+var elementoRecargar = document.getElementById("recargar");
+  elementoRecargar.addEventListener("click", function () {
+    location.reload();
 });
 
+//variables
 var x = 0;
-
 var cancion = new Audio();
-const reproductor = document.getElementById("rep");
-const progressBar = document.getElementById("progress");
-let parar = document.getElementById("parar");
-const currentTimeDisplay = document.getElementById("currentTime"); // Agregamos esta línea
-const durationDisplay = document.getElementById("duration"); // Agregamos esta línea
-let isPlaying = false;
+var reproductor = document.getElementById("rep");
+var progressBar = document.getElementById("progress");
+var progressBarContainer = document.querySelector(".progress-container");
+var parar = document.getElementById("parar");
+var cover = document.getElementById("cover");
+var currentTimeDisplay = document.getElementById("currentTime"); // Agregamos esta línea
+var durationDisplay = document.getElementById("duration"); // Agregamos esta línea
+var isPlaying = false;
 
+//esdeveniments
 reproductor.addEventListener("click", toggleAudio);
-
 cancion.addEventListener("timeupdate", updateProgress);
-cancion.addEventListener("loadedmetadata", updateDuration); // Agregamos este evento
+cancion.addEventListener("loadedmetadata", updateDuration);
+progressBarContainer.addEventListener("click", seekTo);
 
 function toggleAudio() {
   if (isPlaying) {
@@ -58,34 +61,85 @@ function updateDuration() {
   ).padStart(2, "0")}`;
 }
 
-
-
-
 parar.addEventListener("click", () => {
   cancion.pause();
   cancion.currentTime = 0; // Torna al inici
   reproductor.src = "img/icones/icone-play.png"; // Cambia l'icone a "Play"
 });
 
-function selected () {
+cancion.addEventListener("ended", function () {
+  x = x + 1;
+  if (x >= song.length) {
+    x = 0;
+  }
+  selected();
+});
 
-    cancion.src = song[x].url
+cover.src = song[x].cover;
+cover.removeAttribute("hidden"); // Esto quita el atributo hidden para mostrar la imagen
+
+function selected() {
+  cancion.src = song[x].url;
+  cancion.play();
+  reproductor.src = "img/icones/icone-pausa.png";
+  var titol = document.getElementById("titol");
+  titol.textContent = song[x].titol;
+  var artista = document.getElementById("artista");
+  artista.textContent = song[x].artista;
+  var cover = document.getElementById("cover");
+  cover.src = song[x].cover;
+  cover.removeAttribute("hidden");
+}
+
+function seekTo(event) {
+  var clickX =
+    event.clientX - progressBarContainer.getBoundingClientRect().left;
+  var progressBarWidth = progressBarContainer.offsetWidth;
+  var duration = cancion.duration;
+  var newPosition = (clickX / progressBarWidth) * duration;
+
+  var wasPlaying = isPlaying;
+
+  cancion.pause();
+
+  cancion.currentTime = newPosition;
+  if (wasPlaying) {
     cancion.play();
-    reproductor.src = "img/icones/icone-pausa.png";
-    var titol = document.getElementById("titol");
-    titol.textContent = song[x].titol;
-    var artista = document.getElementById("artista");
-    artista.textContent = (song[x].artista);
-    var cover = document.getElementById("cover");
-    cover.src = song[x].cover;
-};
+  }
+}
 
-function next(){
-  x=x+1;
+function mostrarLista(listaCanciones) {
+  const listaCancionesElement = document.getElementById("lista-canciones");
+  listaCancionesElement.innerHTML = ""; // Limpia la lista
+
+  for (let i = 0; i < listaCanciones.length; i++) {
+    const cancion = listaCanciones[i];
+    const listItem = document.createElement("li");
+
+    // Crear la imagen de la portada
+    const portadaImg = document.createElement("img");
+    portadaImg.src = cancion.cover;
+    portadaImg.alt = `${cancion.titol} - ${cancion.artista}`;
+
+    // Crear el texto con el título y el artista
+    const textoCancion = document.createTextNode(
+      `${cancion.titol} - ${cancion.artista}`
+    );
+
+    // Agregar la portada y el texto a la lista de reproducción
+    listItem.appendChild(portadaImg);
+    listItem.appendChild(textoCancion);
+
+    listaCancionesElement.appendChild(listItem);
+  }
+}
+
+function next() {
+  x = x + 1;
   selected();
 }
 
-function back(){
-  x=x-1;
+function back() {
+  x = x - 1;
   selected();
-} 
+}

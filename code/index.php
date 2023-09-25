@@ -5,8 +5,6 @@
     $urbano = file_get_contents("json/urbano.json");
 ?>
 
-
-
 <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -41,15 +39,18 @@
                     <img src="img/playlists/urbano.jpg" class="playlist-urbano" id="urbano" onclick="urbano()">
                 </div>
                 <div class="contingut-secundari">
-                        
-                   
 
+
+                <div class="contingut-secundari">
+                    <div class="info-secundari">
+                        <ul id="lista-canciones"></ul>
                     </div>
+                </div>
+
                 </div>
             <nav>
                 <div class="nav"></div>
             </nav>
-
 
             <script>
                 var song;
@@ -57,41 +58,42 @@
                     song = JSON.parse(<?php echo json_encode($rap)?>);
                     x = 0;
                     selected();
+                    mostrarLista(song);
                 }
 
                 function rock(){
                     song = JSON.parse(<?php echo json_encode($rock)?>);
                     x = 0;
                     selected();
+                    mostrarLista(song);
                 }
 
                 function techno(){
                     song = JSON.parse(<?php echo json_encode($techno)?>);
                     x = 0;
                     selected();
-
+                    mostrarLista(song);
                 }
 
                 function urbano(){
                     song = JSON.parse(<?php echo json_encode($urbano)?>);
                     x = 0;
                     selected();
+                    mostrarLista(song);
+                    actualizarLista();
                 }
-
                 
             </script>
 
             <footer class="footer">
                 <!--L'element <footer> conté informació que apareix a la part inferior de la pàgina web-->
-                <div class="reproductor">
-
-                
+                <div class="reproductor">                
                     <div class="text-info">
-                        <img src="" alt="" id="cover">
+                    <img src="" alt="" id="cover" hidden>
                         <div class="info">
                             <span id="titol"></span>
                             <br>
-                            <span id="artista"></span>
+                            <b id="artista"></b>
                         </div>
                     </div>
 
@@ -103,23 +105,22 @@
                         <img src="img/icones/icone-parar.png" class="icone-parar" id="parar">
                     </div>
 
+                    <div class="ecualizador">
+                    </div>
+
                     <div>
                         <div id="currentTime">0:00</div>
                         <div id="duration">0:00</div>
                     </div>
 
                     <div class="audio-controls">
-                    
                         <div class="progress-container">
                             <div class="progress" id="progress"></div>
-                           
                         </div>
-                        
                     </div>
-                    
+
                 </div>
                 <script src="js/gramola-js.js"></script>
-
             </footer>
         </body>
     </html>

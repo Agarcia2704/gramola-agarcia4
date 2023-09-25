@@ -6,7 +6,6 @@
     font-family: 'Skranji', cursive;
 }
 
-
 body{
     background-color: #3D1F54; /* fons de color de la pàgina */
 }
@@ -21,7 +20,8 @@ body{
     border-color: rgb(201, 4, 255);
     border-style: solid;
     box-shadow: 5px 5px;
-  }
+}
+
 header{
     margin: 25px;
 }
@@ -250,3 +250,28 @@ p{
     margin-top: 50px;
     margin-left: 25px;
 }
+
+.info-secundari{
+    color: white;
+}
+
+#lista-canciones li {
+    margin-top: 25px;
+    margin-bottom: 20px; /* Margen inferior entre elementos de la lista */
+    font-size: 23px; /* Tamaño de fuente para el texto de la canción */
+    display: flex; /* Para alinear verticalmente la imagen y el texto */
+    align-items: center; /* Para alinear verticalmente la imagen y el texto */
+}
+
+#lista-canciones img {
+    margin-right: 25px; /* Margen derecho entre la imagen y el texto */
+    width: 125px; /* Tamaño de la portada */
+    height: 125px; /* Altura de la portada */
+    margin-left: 35px;
+    border-radius: 10px;
+    border-color: rgb(201, 4, 255);
+    border-style: solid;
+}
+
+
+
