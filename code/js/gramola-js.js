@@ -24,8 +24,10 @@ progressBarContainer.addEventListener("click", seekTo);
 function toggleAudio() {
   if (isPlaying) {
     cancion.pause();
+    equalizer.style.display = "none";
   } else {
     cancion.play();
+    equalizer.style.display = "flex";
   }
 
   isPlaying = !isPlaying;
@@ -65,6 +67,7 @@ parar.addEventListener("click", () => {
   cancion.pause();
   cancion.currentTime = 0; // Torna al inici
   reproductor.src = "img/icones/icone-play.png"; // Cambia l'icone a "Play"
+  equalizer.style.display = "none";
 });
 
 cancion.addEventListener("ended", function () {
@@ -89,6 +92,7 @@ function selected() {
   var cover = document.getElementById("cover");
   cover.src = song[x].cover;
   cover.removeAttribute("hidden");
+  equalizer.style.display = "flex";
 }
 
 function seekTo(event) {
@@ -116,15 +120,20 @@ function mostrarLista(listaCanciones) {
     const cancion = listaCanciones[i];
     const listItem = document.createElement("li");
 
+    // Crear un elemento de texto para el título y el artista de la canción
+    const textoCancion = document.createElement("span");
+    textoCancion.textContent = `${cancion.titol} - ${cancion.artista}`;
+    textoCancion.addEventListener("click", function () {
+      reproducirCancion(cancion);
+    });
+
     // Crear la imagen de la portada
     const portadaImg = document.createElement("img");
     portadaImg.src = cancion.cover;
     portadaImg.alt = `${cancion.titol} - ${cancion.artista}`;
-
-    // Crear el texto con el título y el artista
-    const textoCancion = document.createTextNode(
-      `${cancion.titol} - ${cancion.artista}`
-    );
+    portadaImg.addEventListener("click", function () {
+      reproducirCancion(cancion);
+    });
 
     // Agregar la portada y el texto a la lista de reproducción
     listItem.appendChild(portadaImg);
@@ -134,6 +143,13 @@ function mostrarLista(listaCanciones) {
   }
 }
 
+
+
+function reproducirCancion(cancion) {
+  x = song.indexOf(cancion);
+  selected();
+}
+
 function next() {
   x = x + 1;
   selected();
@@ -141,5 +157,13 @@ function next() {
 
 function back() {
   x = x - 1;
+  selected();
+}
+
+
+ function aleatori() {
+   var cancionrandom = Math.floor(Math.random() * song.length);
+  var randomSong = song[cancionrandom];
+  x = cancionrandom;
   selected();
 }

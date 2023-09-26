@@ -273,5 +273,134 @@ p{
     border-style: solid;
 }
 
+.equalizer {
+    display: none;
+    flex-direction: row;
+    position: relative;
+    height: 76px;
+    width: 200px;
+    float: right;
+    margin-left: 1500px;
+    position: absolute;
+    margin-top: -6px;
+  }
+  
+  .equalizer__bar {
+    flex-grow: 0;
+    height: 100%;
+    background-color: rgb(201, 4, 255);
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    transform-origin: center bottom;
+    width: 36px;
+    margin-left: 3px;
+  }
+  
+  .equalizer__bar:nth-child(1) {
+    animation-duration: 1.25s; 
+  }
+  
+  .equalizer__bar:nth-child(2) {
+    animation-delay: -0.75s;
+    animation-duration: 1.375s; 
+  }
+  
+  .equalizer__bar:nth-child(3) {
+    animation-delay: -1s;
+    animation-duration: 1.5s; 
+ }
 
+ .equalizer__bar:nth-child(4) {
+    animation-delay: 0.5s;
+    animation-duration: 1.55s; 
+  }
 
+  .equalizer__bar:nth-child(5) {
+    animation-delay: -2s;
+    animation-duration: 1.65s; 
+  }
+
+  .equalizer__bar:nth-child(6) {
+    animation-delay: -0.5s;
+    animation-duration: 1.5s; 
+  }
+
+  .equalizer__bar:nth-child(7) {
+    animation-delay: 0.5s;
+    animation-duration: 2s; 
+  }
+
+  .equalizer__bar:nth-child(8) {
+    animation-delay: 1.0s;
+    animation-duration: 0.65s;
+  }
+
+  .equalizer__bar:nth-child(9) {
+    animation-delay: -1.90s;
+    animation-duration: 1.15s; 
+  }
+
+  .equalizer__bar:nth-child(10) {
+    animation-delay: -1.5s;
+    animation-duration: 1.85s; 
+  }
+
+  .equalizer__bar:nth-child(11) {
+    animation-delay: -1.25s;
+    animation-duration: 1.25s; 
+  }
+
+  .equalizer__bar:nth-child(12) {
+    animation-delay: -0.75s;
+    animation-duration: 1.85s; 
+  }
+
+  .equalizer__bar:nth-child(13) {
+    animation-delay: 0.5s;
+    animation-duration: 2s; 
+  }
+
+  .equalizer__bar:nth-child(14) {
+    animation-delay: -1.0s;
+    animation-duration: 1.05s; 
+  }
+
+  .equalizer__bar:nth-child(15) {
+    animation-delay: 1.5s;
+    animation-duration: 1.85s; 
+  }
+
+  .equalizer__bar:nth-child(16) {
+    animation-delay: -1.0s;
+    animation-duration: 1.70s; 
+  }
+
+  
+@keyframes pulse {
+    0%  { transform: scaleY(0.31) }
+    4%  { transform: scaleY(0.25) }
+    8%  { transform: scaleY(0.31) }
+    12% { transform: scaleY(0.5)  }
+    16% { transform: scaleY(0.71) }
+    20% { transform: scaleY(0.93) }
+    24% { transform: scaleY(0.86) }
+    28% { transform: scaleY(0.79) }
+    32% { transform: scaleY(0.79) }
+    36% { transform: scaleY(0.57) }
+    40% { transform: scaleY(0.71) }
+    44% { transform: scaleY(0.71) }
+    48% { transform: scaleY(0.79) }
+    52% { transform: scaleY(0.86) }
+    56% { transform: scaleY(0.93) }
+    60% { transform: scaleY(0.86) }
+    64% { transform: scaleY(0.86) }
+    68% { transform: scaleY(0.79) }
+    72% { transform: scaleY(0.71) }
+    76% { transform: scaleY(0.79) }
+    80% { transform: scaleY(0.86) }
+    84% { transform: scaleY(0.86) }
+    88% { transform: scaleY(0.93) }
+    92% { transform: scaleY(0.71) }
+    96% { transform: scaleY(0.5)  }
+    100%{ transform: scaleY(0.31) }
+}

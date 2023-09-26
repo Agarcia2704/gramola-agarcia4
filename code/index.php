@@ -98,15 +98,31 @@
                     </div>
 
                     <div class="icones">
-                        <img src="img/icones/icone-aleatori.png" class="icone-aleatori" id="aleatori">
+                        <img src="img/icones/icone-aleatori.png" class="icone-aleatori" id="aleatori" onclick="aleatori()">
                         <img src="img/icones/icone-enrere.png" class="icone-enrere" id="enrere" onclick="back()">
                         <img src="img/icones/icone-play.png" class="stop" id="rep">
                         <img src="img/icones/icone-avançar.png" class="icone-avançar" id="avançar" onclick="next()">
                         <img src="img/icones/icone-parar.png" class="icone-parar" id="parar">
                     </div>
 
-                    <div class="ecualizador">
-                    </div>
+                    <div class="equalizer" id="equalizer">
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+	                </div>
 
                     <div>
                         <div id="currentTime">0:00</div>
@@ -115,7 +131,8 @@
 
                     <div class="audio-controls">
                         <div class="progress-container">
-                            <div class="progress" id="progress"></div>
+                        <div class="progress" id="progress">
+                    </div>
                         </div>
                     </div>
 
