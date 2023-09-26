@@ -5,6 +5,16 @@
     $urbano = file_get_contents("json/urbano.json");
 ?>
 
+<?php
+   
+   $inicisessio = false;
+   
+   if (isset($_POST["username"])) {
+    $usuari = $_POST["username"];
+    $inicisessio = true;
+   }
+?>
+
 <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -26,9 +36,36 @@
                     <img src="img/logo/logo-gramola.png" class="img-logo" id="recargar" >
                 </div>
                 <div class="perfil">
-                    <p class="form" >Hola, "NOM"</p>
+                <?php if (!$inicisessio): ?>
+                <video src="vid/banner-gramola.mp4" class="banner" autoplay loop></video>
+                <?php endif; ?>
+                <?php if ($inicisessio): ?>
+                    <a href="index.php" class="log-out-form">LOG OUT</a>
+                    <div class="nom-form">
+                        <?php echo 'Hola, ' . $usuari ?>
+                    </div>
+                    <?php endif; ?> 
+                    
                 </div>
-                <div class="navegador"></div>
+
+                <div class="navegador">
+                <?php if ($inicisessio): ?>
+                    
+                    <video src="vid/banner-gramola.mp4" class="banner" autoplay loop></video>
+
+                    <?php endif; ?>
+                <?php if (!$inicisessio): ?>
+                <div class="formulario">
+                
+                    <h2 class="lletra-form">Formulari Inici de Sessió</h2>
+                    <form action="#" method="post">
+                        <input class="lletra-form" type="text" name="username" placeholder="Nom d'usuari" required>
+                        <button class="lletra-form" type="submit">Enviar</button>
+                    </form>
+                </div> 
+                <?php endif; ?> 
+
+                </div>
             </header>
             
                 <div class="contingut">

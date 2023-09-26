@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 *{
     margin:0;
@@ -44,6 +45,7 @@ header{
   }
 
 .form{
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 50px;
     margin-top: 40px;
@@ -280,7 +282,7 @@ p{
     height: 76px;
     width: 200px;
     float: right;
-    margin-left: 1500px;
+    margin-left: 1450px;
     position: absolute;
     margin-top: -6px;
   }
@@ -403,4 +405,79 @@ p{
     92% { transform: scaleY(0.71) }
     96% { transform: scaleY(0.5)  }
     100%{ transform: scaleY(0.31) }
+}
+
+.nom-form{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.log-out-form{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  display: inline;
+  position: absolute;
+  margin-left: 500px;
+  font-size: 25px;
+  margin-top: 100px;
+  text-decoration: none;
+}
+
+.log-out-form:hover {
+  background-color: #3D1F54;
+}
+
+.formulario {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(103, 53, 142);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  margin-left: 118px;
+  margin-top: 9px;
+}
+
+.lletra-form{
+  font-family: 'Roboto', sans-serif;
+}
+
+.formulario h2 {
+  margin-bottom: 5px;
+}
+
+.formulario input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
+}
+
+.formulario button[type="submit"] {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.formulario button[type="submit"]:hover {
+  background-color: #3D1F54;
+}
+
+.banner{
+  height: 150px;
+  width: 100%;
+  align-items: center;
 }
