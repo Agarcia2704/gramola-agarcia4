@@ -77,7 +77,6 @@
                 </div>
                 <div class="contingut-secundari">
 
-
                 <div class="contingut-secundari">
                     <div class="info-secundari">
                         <ul id="lista-canciones"></ul>
@@ -117,7 +116,6 @@
                     x = 0;
                     selected();
                     mostrarLista(song);
-                    actualizarLista();
                 }
                 
             </script>
@@ -135,11 +133,11 @@
                     </div>
 
                     <div class="icones">
-                        <img src="img/icones/icone-aleatori.png" class="icone-aleatori" id="aleatori" onclick="aleatori()">
-                        <img src="img/icones/icone-enrere.png" class="icone-enrere" id="enrere" onclick="back()">
-                        <img src="img/icones/icone-play.png" class="stop" id="rep">
-                        <img src="img/icones/icone-avançar.png" class="icone-avançar" id="avançar" onclick="next()">
-                        <img src="img/icones/icone-parar.png" class="icone-parar" id="parar">
+                        <img src="img/icones/icone-aleatori.png" class="icone-aleatori" id="aleatori" onmouseover="cambiarAleatori()" onmouseout="restaurarAleatori()" onclick="aleatori()">
+                        <img src="img/icones/icone-enrere.png" class="icone-enrere" id="enrere" onmouseover="cambiarEnrere()" onmouseout="restaurarEnrere()" onclick="back()">
+                        <img src="img/icones/icone-play.png" class="stop" id="rep" onmouseover="cambiarPlay()" onmouseout="restaurarPlay()">
+                        <img src="img/icones/icone-avançar.png" class="icone-avançar" id="avançar" onmouseover="cambiarAvançar()" onmouseout="restaurarAvançar()" onclick="next()">
+                        <img src="img/icones/icone-parar.png" class="icone-parar" id="parar"onmouseover="cambiarParar()" onmouseout="restaurarParar()" >
                     </div>
 
                     <div class="equalizer" id="equalizer">

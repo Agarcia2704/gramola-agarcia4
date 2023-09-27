@@ -167,3 +167,44 @@ function back() {
   x = cancionrandom;
   selected();
 }
+
+
+function cambiarAleatori() {
+  var aleatori = document.getElementById("aleatori");
+  aleatori.src = "img/icones/icone-aleatori-activat.png";
+}
+
+function restaurarAleatori() {
+  var aleatori = document.getElementById("aleatori");
+  aleatori.src = "img/icones/icone-aleatori.png";
+}
+
+function cambiarEnrere() {
+  var aleatori = document.getElementById("enrere");
+  aleatori.src = "img/icones/icone-enrere-activat.png";
+}
+
+function restaurarEnrere() {
+  var aleatori = document.getElementById("enrere");
+  aleatori.src = "img/icones/icone-enrere.png";
+}
+
+function cambiarAvançar() {
+  var aleatori = document.getElementById("avançar");
+  aleatori.src = "img/icones/icone-avançar-activat.png";
+}
+
+function restaurarAvançar() {
+  var aleatori = document.getElementById("avançar");
+  aleatori.src = "img/icones/icone-avançar.png";
+}
+
+function cambiarParar() {
+  var aleatori = document.getElementById("parar");
+  aleatori.src = "img/icones/icone-parar-activat.png";
+}
+
+function restaurarParar() {
+  var aleatori = document.getElementById("parar");
+  aleatori.src = "img/icones/icone-parar.png";
+}
