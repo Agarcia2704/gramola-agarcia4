@@ -1,21 +1,46 @@
-<!-- Codi PHP que llegeix el contingut de quatre fitxers JSON diferents
- i emmagatzema aquest contingut en quatre variables diferents-->
 <?php
+    /*Codi PHP que llegeix el contingut de quatre fitxers JSON diferents
+    i emmagatzema aquest contingut en quatre variables diferents*/
     $rap = file_get_contents("json/rap.json");
     $rock = file_get_contents("json/rock.json");
     $techno =file_get_contents("json/techno.json");
     $urbano = file_get_contents("json/urbano.json");
-?>
 
-<!-- Codi PHP que verifica si s'ha enviat un nom d'usuari a través d'un formulari i,
-si és així, emmagatzema aquest nom d'usuari a la variable $usuari -->
-<?php
+
+    /*Codi PHP que verifica si s'ha enviat un nom d'usuari a través d'un formulari i,
+    si és així, emmagatzema aquest nom d'usuari a la variable $usuari*/
+
    $inicisessio = false;
-   
+
    if (isset($_POST["username"])) {
     $usuari = $_POST["username"];
     $inicisessio = true;
+    setcookie("username", $usuari, time()+ 3600);
    }
+
+   if (isset($_COOKIE["username"])) {
+     $usuari = $_COOKIE["username"];
+     $inicisessio = true;
+    }
+
+
+
+    if (isset($_GET["playlist"])) {
+        $playlist = $_GET["playlist"]; //Obté el nom de la playlist seleccionada
+
+        //Obté la hora i la data actual
+        $fechaHora = date("Y-m-d H:i:s");
+
+        $infoPlaylist = array(
+            "playlist" => $playlist,
+            "fechaHora" => $fechaHora
+        );
+
+        $infoPlaylistJSON = json_encode($infoPlaylist);
+        
+        //Estableix la coockie amb la informació
+        setcookie("lastPlaylist", $infoPlaylistJSON, time() + 3600); // Expira en 1 hora
+    }
 ?>
 
 <!-- Comença el codi HTML -->
@@ -47,11 +72,11 @@ si és així, emmagatzema aquest nom d'usuari a la variable $usuari -->
                 <?php if (!$inicisessio): ?>
 
                 <!-- Video per a la pàgina web -->
-                <video src="vid/banner-gramola.mp4" class="banner" autoplay loop></video>
+                <video src="vid/banner-gramola.mp4" class="banner2" autoplay loop></video>
 
                 <?php endif; ?>
                 <?php if ($inicisessio): ?>
-                    <a href="index.php" class="log-out-form">LOG OUT</a>
+                    <a href="log-out.php" class="log-out-form">LOG OUT</a>
                     <div class="nom-form">
 
                         <!-- PHP per mostrar per pantalla Hola, + el nom de l'usuari que ha posat al formulari -->
@@ -64,10 +89,14 @@ si és així, emmagatzema aquest nom d'usuari a la variable $usuari -->
 
                 <div class="navegador">
                 <?php if ($inicisessio): ?>
-
+                    <div class="banner-boto">
+                    <a href="informacio-tecnica.php" class="informacio-tecnica">Informació Tècnica</a>
+                    <a href="afeguir-canço.php" class="afeguir-canço" >Afeguir cançó</a>
+                    <a href="llista-cançons.php" class="llista-cançons" >Llista cançons</a>
+                    </div>
                     <!-- Video per a la pàgina web -->
                     <video src="vid/banner-gramola.mp4" class="banner" autoplay loop></video>
-
+                    
                     <?php endif; ?>
                 <?php if (!$inicisessio): ?>
 

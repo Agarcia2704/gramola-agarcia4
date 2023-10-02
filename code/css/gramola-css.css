@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  /* Ajusta el diseño para pantallas pequeñas */
+  .contingut-principal {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+
+  /* Modifica estilos específicos para elementos en pantallas pequeñas */
+  .perfil {
+      float: none;
+      width: 100%;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+  /* Ajusta aún más el diseño para pantallas muy pequeñas */
+  .contingut-principal {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      gap: 10px;
+  }
+}
+
 *{
     margin:0;
     padding:0;
@@ -481,7 +504,108 @@ p{
 }
 
 .banner{
-  height: 150px;
+  height: 120px;
+  width: 50%;
+  margin-top: -140px;
+  position: absolute;
+}
+
+.banner2{
+  height: 120px;
   width: 100%;
-  align-items: center;
+  margin-top: 10px;
+}
+
+.informacio-tecnica {
+  color: white;
+}
+
+.informacio-tecnica:hover {
+  background-color: rgb(201, 4, 255);
+}
+
+.info-coockie {
+  font-size: 25px;
+}
+
+.banner-boto{
+  margin-top: 120px;
+  text-align: center;
+}
+
+.afeguir-canço{
+  color: white;
+}
+
+.afeguir-canço:hover {
+  background-color: rgb(201, 4, 255);
+}
+
+.llista-cançons{
+  color: white;
+}
+
+.llista-cançons:hover {
+  background-color: rgb(201, 4, 255);
+}
+
+.footer2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff; /* Color del texto en el reproductor */
+  padding: 20px 0; /* Espaciado interno */
+  text-align: center; /* Alineación del contenido */
+  z-index: 999; /* Z-index para superponer sobre otros elementos */
+}
+
+.llistat{
+  color: white;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.lletra-llistat{
+  color: white;
+}
+
+.boto-parar{
+  margin-left: 25px;
+}
+
+.boto-parar:hover {
+  background-color: rgb(201, 4, 255);
+}
+
+.tornar-index{
+  color: white;
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+.tornar-index:hover {
+  background-color: rgb(201, 4, 255);
+}
+
+.formulari-pujar-cançons{
+  color: white;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.pujar-canço{
+  color: white;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+.boto-pujar{
+  width: 150px;
+  height: 50px;
+}
+
+.boto-pujar:hover {
+  background-color: rgb(201, 4, 255);
 }

@@ -60,7 +60,6 @@ function updateProgress() {
   ).padStart(2, "0")}`;
 }
 
-
 function updateDuration() {
   //Obté la duració total de la cançó en format mm:ss
   const durationMinutes = Math.floor(cancion.duration / 60);
@@ -70,7 +69,7 @@ function updateDuration() {
   ).padStart(2, "0")}`;
 }
 
-//esdeveniment per 
+//esdeveniment per
 parar.addEventListener("click", () => {
   cancion.pause();
   cancion.currentTime = 0; // Torna al inici
