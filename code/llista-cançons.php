@@ -5,9 +5,9 @@
     <title>Lista de Canciones</title>
     <link rel="stylesheet" href="css/gramola-css.css">
 </head>
-<body>
+<body class="body3">
     <div class="contingut">
-        <h1 class="llistat" >LLISTAT DE CANÇONS AFEGUIDES:</h1>
+        <h1 class="llistat" >LLISTAT DE CANÇONS AFEGIDES:</h1>
         <br>
         <a href="index.php" class="tornar-index">Tornar a la pàgina principal</a>
         <ul id="lista-canciones">

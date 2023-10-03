@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@300&display=swap');
 
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 768px) {
@@ -307,7 +308,7 @@ p{
     flex-direction: row;
     position: relative;
     height: 76px;
-    width: 200px;
+    width: 250px;
     float: right;
     margin-left: 1450px;
     position: absolute;
@@ -404,6 +405,31 @@ p{
     animation-duration: 1.70s; 
   }
 
+  .equalizer__bar:nth-child(17) {
+    animation-delay: -1.0s;
+    animation-duration: 0.70s; 
+  }
+
+  .equalizer__bar:nth-child(18) {
+    animation-delay: -0.3s;
+    animation-duration: 1.20s; 
+  }
+
+  .equalizer__bar:nth-child(19) {
+    animation-delay: -0.5s;
+    animation-duration: 1.70s; 
+  }
+
+  .equalizer__bar:nth-child(20) {
+    animation-delay: -0.7s;
+    animation-duration: 1.50s; 
+  }
+
+  .equalizer__bar:nth-child(21) {
+    animation-delay: -1.0s;
+    animation-duration: 0.50s; 
+  }
+
   
 @keyframes pulse {
     0%  { transform: scaleY(0.31) }
@@ -435,15 +461,15 @@ p{
 }
 
 .nom-form{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Kalam', cursive;
   color: white;
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .log-out-form{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Kalam', cursive;
   color: white;
   display: inline;
   position: absolute;
@@ -505,59 +531,26 @@ p{
 
 .banner{
   height: 120px;
-  width: 50%;
-  margin-top: -140px;
-  position: absolute;
-}
-
-.banner2{
-  height: 120px;
   width: 100%;
   margin-top: 10px;
 }
 
 .informacio-tecnica {
   color: white;
+  margin-right: 20px;
 }
 
 .informacio-tecnica:hover {
   background-color: rgb(201, 4, 255);
 }
 
-.info-coockie {
+.info-cookie {
   font-size: 25px;
 }
 
 .banner-boto{
-  margin-top: 120px;
+  margin-top: 50px;
   text-align: center;
-}
-
-.afeguir-canço{
-  color: white;
-}
-
-.afeguir-canço:hover {
-  background-color: rgb(201, 4, 255);
-}
-
-.llista-cançons{
-  color: white;
-}
-
-.llista-cançons:hover {
-  background-color: rgb(201, 4, 255);
-}
-
-.footer2 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: #fff; /* Color del texto en el reproductor */
-  padding: 20px 0; /* Espaciado interno */
-  text-align: center; /* Alineación del contenido */
-  z-index: 999; /* Z-index para superponer sobre otros elementos */
 }
 
 .llistat{
@@ -608,4 +601,164 @@ p{
 
 .boto-pujar:hover {
   background-color: rgb(201, 4, 255);
+}
+
+.boto-web{
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #3D1F54;
+  box-shadow: 0 5px #7f42ae;
+  text-decoration: none;
+  width: 180px;
+  font-size: 20px;
+  margin-right: 25px;
+}
+
+.boto-web:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px rgb(201, 4, 255);
+  top: 1px;
+}
+
+.boto-web:active {
+  box-shadow: 0 0 rgb(201, 4, 255);
+  top: 5px;
+}
+
+.body2 {
+  font-family: 'Arial', sans-serif;
+  background-color: #3D1F54;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.pujar-canço {
+  font-family: 'Times New Roman', serif;
+  font-size: 50px;
+  margin-top: 30px;
+  color: rgb(201, 4, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.formulari-pujar-cançons {
+  background-color: rgba(201, 4, 255, 0.7);
+  border-radius: 10px;
+  padding: 100px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 2000px;
+  box-shadow: 1px 1px 40px #e645fe;
+  box-shadow: 1px 1px 40px #e645fe;
+  box-shadow: 1px 1px 40px #e645fe;
+  box-shadow: 5px 5px 40px #e645fe;
+}
+
+label {
+  font-size: 18px;
+  color: white;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(201, 4, 255, 0.2);
+  color: white;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: rgba(201, 4, 255, 0.7);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: rgba(201, 4, 255, 0.7);
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(201, 4, 255);
+}
+
+.tornar-index {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* Estilos generales */
+.body4 {
+  font-family: 'Arial', sans-serif;
+  background-color: #3D1F54;
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para el div de cookies */
+.cookie {
+  background-color: rgba(201, 4, 255, 0.2);
+  border: 1px solid rgb(201, 4, 255);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 40px #e645fe;
+  box-shadow: 1px 1px 40px #e645fe;
+  box-shadow: 1px 1px 40px #e645fe;
+  box-shadow: 5px 5px 40px #e645fe;
+}
+
+/* Estilos para el texto dentro del div de cookies */
+.info-cookie {
+  font-size: 18px;
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+/* Estilos para los enlaces */
+.tornar-index2 {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  font-size: 40px;
+  margin-left: 700px;
+  margin-top: 200px;
+}
+
+.tornar-index2:hover {
+  color: #e645fe;
 }

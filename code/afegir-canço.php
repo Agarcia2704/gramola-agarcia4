@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error al carregar els arxius. Codi d'error MP3: " . $arxiu_mp3["error"] . ", Codi d'error Imagen: " . $arxiu_img["error"];
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -43,10 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/gramola-css.css">
     <script src="js/gramola-js.js"></script>
-    <title>Subir Canción</title>
+    <title>Pujar cançó</title>
 </head>
-<body>
-    <h1 class="pujar-canço">PUJAR CANÇO</h1>
+<body class="body2">
+    <h1 class="pujar-canço">PUJAR CANÇÓ</h1>
     <form method="post" enctype="multipart/form-data">
         <div class="formulari-pujar-cançons">
             <label for="titol">Titol:</label>
@@ -59,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="file" name="arxiu_mp3" accept=".mp3" required><br><br>
             
             <label for="arxiu_img">Cover (JPG i PNG):</label>
-            <input type="file" name="arxiu_img" accept=".jpg, .png" required><br><br>
+            <input type="file" name="arxiu_img" accept=".jpg, .png, jpeg" required><br><br>
             
             <input type="submit" value="Pujar cançó" class="boto-pujar">
         </div>

@@ -5,7 +5,15 @@
     $rock = file_get_contents("json/rock.json");
     $techno =file_get_contents("json/techno.json");
     $urbano = file_get_contents("json/urbano.json");
+    $object = (object) [
+        'nombre' => [],
+        'fecha' => [],
+      ];
+      if(isset($_COOKIE["ultimaplaylist"])){
 
+      }else{
+        setcookie ('ultimaplaylist', json_encode($object), time()+2678400);
+      }
 
     /*Codi PHP que verifica si s'ha enviat un nom d'usuari a través d'un formulari i,
     si és així, emmagatzema aquest nom d'usuari a la variable $usuari*/
@@ -72,7 +80,7 @@
                 <?php if (!$inicisessio): ?>
 
                 <!-- Video per a la pàgina web -->
-                <video src="vid/banner-gramola.mp4" class="banner2" autoplay loop></video>
+                <video src="vid/banner-gramola.mp4" class="banner" autoplay loop></video>
 
                 <?php endif; ?>
                 <?php if ($inicisessio): ?>
@@ -90,12 +98,11 @@
                 <div class="navegador">
                 <?php if ($inicisessio): ?>
                     <div class="banner-boto">
-                    <a href="informacio-tecnica.php" class="informacio-tecnica">Informació Tècnica</a>
-                    <a href="afeguir-canço.php" class="afeguir-canço" >Afeguir cançó</a>
-                    <a href="llista-cançons.php" class="llista-cançons" >Llista cançons</a>
+                    <a href="informacio-tecnica.php" class="boto-web">Informació Tècnica</a>
+                    <a href="afegir-canço.php" class="boto-web" >Afegir cançó</a>
+                    <a href="llista-cançons.php" class="boto-web" >Llista cançons</a>
                     </div>
                     <!-- Video per a la pàgina web -->
-                    <video src="vid/banner-gramola.mp4" class="banner" autoplay loop></video>
                     
                     <?php endif; ?>
                 <?php if (!$inicisessio): ?>
@@ -138,7 +145,7 @@
                 <div class="nav"></div>
             </nav>
             
-            <!-- Script per afeguir JavaScript al document -->
+            <!-- Script per afegir JavaScript al document -->
             <script>
 
                 //Creem la variable song
@@ -151,6 +158,13 @@
                     //crida la funció selected i mostrarLlista
                     selected();
                     mostrarLista(song);
+
+                    let cookie = JSON.parse(getCookie("ultimaplaylist"));
+                    let fecha = new Date();
+                    let timestamp = fecha.getTime() / 1000;
+                    cookie.nombre[0] = "rap";
+                    cookie.fecha[0] = timestamp;
+                    document.cookie = "ultimaplaylist=" + JSON.stringify(cookie) + "; expires=Thu, 01 Jan 2024 00:00:00; path=/;";
                 }
 
                 //Funció que assigna l'array $rock a la variable song mitjançant la funció JSON.parse()
@@ -160,6 +174,13 @@
                     //crida la funció selected i mostrarLlista
                     selected();
                     mostrarLista(song);
+                    
+                    let cookie = JSON.parse(getCookie("ultimaplaylist"));
+                    let fecha = new Date();
+                    let timestamp = fecha.getTime() / 1000;
+                    cookie.nombre[0] = "rock";
+                    cookie.fecha[0] = timestamp;
+                    document.cookie = "ultimaplaylist=" + JSON.stringify(cookie) + "; expires=Thu, 01 Jan 2024 00:00:00; path=/;";
                 }
 
                 //Funció que assigna l'array $techno a la variable song mitjançant la funció JSON.parse()
@@ -169,6 +190,13 @@
                     //crida la funció selected i mostrarLlista
                     selected();
                     mostrarLista(song);
+
+                    let cookie = JSON.parse(getCookie("ultimaplaylist"));
+                    let fecha = new Date();
+                    let timestamp = fecha.getTime() / 1000;
+                    cookie.nombre[0] = "techno";
+                    cookie.fecha[0] = timestamp;
+                    document.cookie = "ultimaplaylist=" + JSON.stringify(cookie) + "; expires=Thu, 01 Jan 2024 00:00:00; path=/;";
                 }
 
                 //Funció que assigna l'array $urbano a la variable song mitjançant la funció JSON.parse()
@@ -178,6 +206,13 @@
                     //crida la funció selected i mostrarLlista
                     selected();
                     mostrarLista(song);
+
+                    let cookie = JSON.parse(getCookie("ultimaplaylist"));
+                    let fecha = new Date();
+                    let timestamp = fecha.getTime() / 1000;
+                    cookie.nombre[0] = "urbano";
+                    cookie.fecha[0] = timestamp;
+                    document.cookie = "ultimaplaylist=" + JSON.stringify(cookie) + "; expires=Thu, 01 Jan 2024 00:00:00; path=/;";
                 }
                 
             </script>
@@ -208,6 +243,11 @@
 
                     <!-- Tots els divs per les barres del mesurador de volum "fals" -->
                     <div class="equalizer" id="equalizer">
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
+                        <div class="equalizer__bar"></div>
                         <div class="equalizer__bar"></div>
                         <div class="equalizer__bar"></div>
                         <div class="equalizer__bar"></div>
