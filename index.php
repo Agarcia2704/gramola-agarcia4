@@ -1,10 +1,10 @@
 <?php
     /*Codi PHP que llegeix el contingut de quatre fitxers JSON diferents
     i emmagatzema aquest contingut en quatre variables diferents*/
-    $rap = file_get_contents("json/rap.json");
-    $rock = file_get_contents("json/rock.json");
-    $techno =file_get_contents("json/techno.json");
-    $urbano = file_get_contents("json/urbano.json");
+    $rap = file_get_contents("code/json/rap.json");
+    $rock = file_get_contents("code/json/rock.json");
+    $techno =file_get_contents("code/json/techno.json");
+    $urbano = file_get_contents("code/json/urbano.json");
     $object = (object) [
         'nombre' => [],
         'fecha' => [],
@@ -57,10 +57,10 @@
             <meta charset="UTF-8">
 
             <!-- Logo del projecte -->
-            <link rel="icon" type="image/png" href="img/logo/logo-gramola.png">
+            <link rel="icon" type="image/png" href="code/img/logo/logo-gramola.png">
 
             <!-- Vinculació del CSS amb l'HTML -->
-            <link rel="stylesheet" href="css/gramola-css.css">
+            <link rel="stylesheet" href="code/css/gramola-css.css">
 
             <!-- Titol del projecte -->
             <title>GRAMOLA 2.0</title>
@@ -72,17 +72,17 @@
 
                 <!--L'element <header> conté elements que apareixen a la part superior de la pàgina web-->
                 <div class="logo">
-                    <img src="img/logo/logo-gramola.png" class="img-logo" id="recargar" >
+                    <img src="code/img/logo/logo-gramola.png" class="img-logo" id="recargar" >
                 </div>
                 <div class="perfil">
                 <?php if (!$inicisessio): ?>
 
                 <!-- Video per a la pàgina web -->
-                <video src="vid/banner-gramola.mp4" class="banner" autoplay loop></video>
+                <video src="code/vid/banner-gramola.mp4" class="banner" autoplay loop></video>
 
                 <?php endif; ?>
                 <?php if ($inicisessio): ?>
-                    <a href="log-out.php" class="log-out-form">LOG OUT</a>
+                    <a href="code/log-out.php" class="log-out-form">LOG OUT</a>
                     <div class="nom-form">
 
                         <!-- PHP per mostrar per pantalla Hola, + el nom de l'usuari que ha posat al formulari -->
@@ -95,9 +95,9 @@
                 <div class="navegador">
                 <?php if ($inicisessio): ?>
                     <div class="banner-boto">
-                    <a href="informacio-tecnica.php" class="boto-web">Informació Tècnica</a>
-                    <a href="afegir-canço.php" class="boto-web" >Afegir cançó</a>
-                    <a href="llista-cançons.php" class="boto-web" >Llista cançons</a>
+                    <a href="code/informacio-tecnica.php" class="boto-web">Informació Tècnica</a>
+                    <a href="code/afegir-canço.php" class="boto-web" >Afegir cançó</a>
+                    <a href="code/llista-cançons.php" class="boto-web" >Llista cançons</a>
                     </div>
                     <!-- Video per a la pàgina web -->
                     <?php endif; ?>
@@ -120,10 +120,10 @@
 
                     <!-- Imatges de les playlist amb onclick -->
                     <div class="contingut-principal">
-                        <img src="img/playlists/rap.jpg" class="playlist-rap" id="rap" onclick="rap()">
-                        <img src="img/playlists/rock.jpg" class="playlist-rock" id="rock" onclick="rock()">
-                        <img src="img/playlists/techno.jpg" class="playlist-techno" id="techno" onclick="techno()">
-                        <img src="img/playlists/urbano.jpg" class="playlist-urbano" id="urbano" onclick="urbano()">
+                        <img src="code/img/playlists/rap.jpg" class="playlist-rap" id="rap" onclick="rap()">
+                        <img src="code/img/playlists/rock.jpg" class="playlist-rock" id="rock" onclick="rock()">
+                        <img src="code/img/playlists/techno.jpg" class="playlist-techno" id="techno" onclick="techno()">
+                        <img src="code/img/playlists/urbano.jpg" class="playlist-urbano" id="urbano" onclick="urbano()">
                     </div>
 
                 <div class="contingut-secundari">
@@ -227,11 +227,11 @@
 
                     <!-- Totes les imatges del icones de reproducció -->
                     <div class="icones">
-                        <img src="img/icones/icone-aleatori-desactivat.png" class="icone-aleatori" id="aleatori" onmouseover="cambiarAleatori()" onmouseout="restaurarAleatori()" onclick="aleatori()" disabled>
-                        <img src="img/icones/icone-enrere-desactivat.png" class="icone-enrere" id="enrere" onmouseover="cambiarEnrere()" onmouseout="restaurarEnrere()" onclick="back()" disabled>
-                        <img src="img/icones/icone-play-desactivat.png" class="stop" id="rep" onmouseover="cambiarPlay()" onmouseout="restaurarPlay()">
-                        <img src="img/icones/icone-avançar-desactivat.png" class="icone-avançar" id="avançar" onmouseover="cambiarAvançar()" onmouseout="restaurarAvançar()" onclick="next()" disabled>
-                        <img src="img/icones/icone-parar-desactivat.png" class="icone-parar" id="parar"onmouseover="cambiarParar()" onmouseout="restaurarParar()" disabled >
+                        <img src="code/img/icones/icone-aleatori-desactivat.png" class="icone-aleatori" id="aleatori" onmouseover="cambiarAleatori()" onmouseout="restaurarAleatori()" onclick="aleatori()" disabled>
+                        <img src="code/img/icones/icone-enrere-desactivat.png" class="icone-enrere" id="enrere" onmouseover="cambiarEnrere()" onmouseout="restaurarEnrere()" onclick="back()" disabled>
+                        <img src="code/img/icones/icone-play-desactivat.png" class="stop" id="rep" onmouseover="cambiarPlay()" onmouseout="restaurarPlay()">
+                        <img src="code/img/icones/icone-avançar-desactivat.png" class="icone-avançar" id="avançar" onmouseover="cambiarAvançar()" onmouseout="restaurarAvançar()" onclick="next()" disabled>
+                        <img src="code/img/icones/icone-parar-desactivat.png" class="icone-parar" id="parar"onmouseover="cambiarParar()" onmouseout="restaurarParar()" disabled >
                     </div>
 
                     <!-- Tots els divs per les barres del mesurador de volum "fals" -->
@@ -274,7 +274,7 @@
 
                 </div>
                 <!--Vinculació del JavaScript amb l'HTML-->
-                <script src="js/gramola-js.js"></script>
+                <script src="code/js/gramola-js.js"></script>
             </footer>
         </body>
     </html>

@@ -33,7 +33,7 @@
             ?>
             </div>
         </ul>
-        <a href="index.php" class="tornar-index2">Tornar a la pàgina principal</a>
+        <a href="../index.php" class="tornar-index2">Tornar a la pàgina principal</a>
     </div>
     <!-- JavaScript -->
     <script>

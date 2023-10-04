@@ -57,6 +57,6 @@ if (move_uploaded_file($arxiu_mp3["tmp_name"], $nombre_mp3) && move_uploaded_fil
         </div>
     </form>
     <br>
-    <a href="index.php" class="tornar-index">Tornar a la pàgina principal</a>
+    <a href="../index.php" class="tornar-index">Tornar a la pàgina principal</a>
 </body>
 </html>
