@@ -36,15 +36,15 @@ body{
 }
 
 .logo {
-    width: 250px;           /* amplada de 250 píxels */
-    height: 150px;          /* altura de 150 píxels */
-    background: rgb(0, 0, 0);       /* Fonds de color vermell */
-    float: left;
-    position: absolute;
-    border-radius: 10px;
-    border-color: rgb(201, 4, 255);
-    border-style: solid;
-    box-shadow: 5px 5px;
+  width: 250px; /* amplada de 250 píxels */
+  height: 150px; /* altura de 150 píxels */
+  background: rgb(0, 0, 0); /* Fonds de color vermell */
+  float: left;
+  position: absolute;
+  border-radius: 10px;
+  border-color: rgb(201, 4, 255);
+  border-style: solid;
+  box-shadow: 5px 5px;
 }
 
 header{
@@ -58,9 +58,9 @@ header{
 }
 
 .perfil {
-    width: 620px;          
-    height: 150px;          
-    background: rgb(0, 0, 0);     
+    width: 620px;
+    height: 150px;
+    background: rgb(0, 0, 0);
     float: right;
     border-radius: 10px;
     border-color: rgb(201, 4, 255);
@@ -76,8 +76,8 @@ header{
 }
 
 .navegador{
-    width: 940px;          
-    height: 150px;          
+    width: 940px;
+    height: 150px;
     background: rgb(0, 0, 0);
     margin-left: 280px;
     border-radius: 10px;
@@ -87,9 +87,9 @@ header{
 }
 
 .reproductor{
-    width: 100%px;          
-    height: 150px;         
-    background: rgb(0, 0, 0);       
+    width: 100%px;
+    height: 150px;
+    background: rgb(0, 0, 0);
     margin-top: 25px;
     margin-right: 25px;
     margin-left: 25px;
@@ -137,26 +137,26 @@ header{
 
 .contingut-principal{
     float: left;
-    width: 63.5%;          
+    width: 63.5%;
     height: 640px;
     margin-left: 25px;
-    margin-right: 25px;   
-    background: rgb(0, 0, 0);  
-    border-radius: 10px;
-    border-color: rgb(201, 4, 255);
-    border-style: solid;  
-    box-shadow: 5px 5px;
-}
-
-.contingut-secundari{
-    display: inline-block;
-    width: 620px;          
-    height: 640px;   
+    margin-right: 25px;
     background: rgb(0, 0, 0);
     border-radius: 10px;
     border-color: rgb(201, 4, 255);
     border-style: solid;
     box-shadow: 5px 5px;
+}
+
+.contingut-secundari{
+  display: inline-block;
+  width: 620px;
+  height: 640px;
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  border-color: rgb(201, 4, 255);
+  border-style: solid;
+  box-shadow: 5px 5px;
 }
 
 p{
@@ -170,37 +170,35 @@ p{
 }
 
 .playlist-rap{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    border-color: rgb(201, 4, 255);
-    border-style: solid;
-    margin-right: 200px;
-    margin-left: 200px;
-    margin-top: 45px;
-
-    
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  border-color: rgb(201, 4, 255);
+  border-style: solid;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 45px;
 }
 
 .playlist-rock{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    border-color: rgb(201, 4, 255);
-    border-style: solid;
-    margin-right: 100px;
-    margin-left: 110px;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  border-color: rgb(201, 4, 255);
+  border-style: solid;
+  margin-right: 100px;
+  margin-left: 110px;
 }
 
 .playlist-techno{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    border-color: rgb(201, 4, 255);
-    border-style: solid;
-    margin-top: 25px;
-    margin-right: 200px;
-    margin-left: 200px;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  border-color: rgb(201, 4, 255);
+  border-style: solid;
+  margin-top: 25px;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 .playlist-urbano{
@@ -272,7 +270,7 @@ p{
     font-size: 20px;
     width: 200px;
     display: inline;
-    position: absolute; 
+    position: absolute;
     margin-top: 50px;
     margin-left: 25px;
 }
@@ -314,7 +312,7 @@ p{
     position: absolute;
     margin-top: -6px;
   }
-  
+
   .equalizer__bar {
     flex-grow: 0;
     height: 100%;
@@ -325,39 +323,39 @@ p{
     width: 36px;
     margin-left: 3px;
   }
-  
+
   .equalizer__bar:nth-child(1) {
-    animation-duration: 1.25s; 
+    animation-duration: 1.25s;
   }
-  
+
   .equalizer__bar:nth-child(2) {
     animation-delay: -0.75s;
-    animation-duration: 1.375s; 
+    animation-duration: 1.375s;
   }
-  
+
   .equalizer__bar:nth-child(3) {
     animation-delay: -1s;
-    animation-duration: 1.5s; 
+    animation-duration: 1.5s;
  }
 
  .equalizer__bar:nth-child(4) {
     animation-delay: 0.5s;
-    animation-duration: 1.55s; 
+    animation-duration: 1.55s;
   }
 
   .equalizer__bar:nth-child(5) {
     animation-delay: -2s;
-    animation-duration: 1.65s; 
+    animation-duration: 1.65s;
   }
 
   .equalizer__bar:nth-child(6) {
     animation-delay: -0.5s;
-    animation-duration: 1.5s; 
+    animation-duration: 1.5s;
   }
 
   .equalizer__bar:nth-child(7) {
     animation-delay: 0.5s;
-    animation-duration: 2s; 
+    animation-duration: 2s;
   }
 
   .equalizer__bar:nth-child(8) {
@@ -367,70 +365,69 @@ p{
 
   .equalizer__bar:nth-child(9) {
     animation-delay: -1.90s;
-    animation-duration: 1.15s; 
+    animation-duration: 1.15s;
   }
 
   .equalizer__bar:nth-child(10) {
     animation-delay: -1.5s;
-    animation-duration: 1.85s; 
+    animation-duration: 1.85s;
   }
 
   .equalizer__bar:nth-child(11) {
     animation-delay: -1.25s;
-    animation-duration: 1.25s; 
+    animation-duration: 1.25s;
   }
 
   .equalizer__bar:nth-child(12) {
     animation-delay: -0.75s;
-    animation-duration: 1.85s; 
+    animation-duration: 1.85s;
   }
 
   .equalizer__bar:nth-child(13) {
     animation-delay: 0.5s;
-    animation-duration: 2s; 
+    animation-duration: 2s;
   }
 
   .equalizer__bar:nth-child(14) {
     animation-delay: -1.0s;
-    animation-duration: 1.05s; 
+    animation-duration: 1.05s;
   }
 
   .equalizer__bar:nth-child(15) {
     animation-delay: 1.5s;
-    animation-duration: 1.85s; 
+    animation-duration: 1.85s;
   }
 
   .equalizer__bar:nth-child(16) {
     animation-delay: -1.0s;
-    animation-duration: 1.70s; 
+    animation-duration: 1.70s;
   }
 
   .equalizer__bar:nth-child(17) {
     animation-delay: -1.0s;
-    animation-duration: 0.70s; 
+    animation-duration: 0.70s;
   }
 
   .equalizer__bar:nth-child(18) {
     animation-delay: -0.3s;
-    animation-duration: 1.20s; 
+    animation-duration: 1.20s;
   }
 
   .equalizer__bar:nth-child(19) {
     animation-delay: -0.5s;
-    animation-duration: 1.70s; 
+    animation-duration: 1.70s;
   }
 
   .equalizer__bar:nth-child(20) {
     animation-delay: -0.7s;
-    animation-duration: 1.50s; 
+    animation-duration: 1.50s;
   }
 
   .equalizer__bar:nth-child(21) {
     animation-delay: -1.0s;
-    animation-duration: 0.50s; 
+    animation-duration: 0.50s;
   }
 
-  
 @keyframes pulse {
     0%  { transform: scaleY(0.31) }
     4%  { transform: scaleY(0.25) }
@@ -572,13 +569,15 @@ p{
 }
 
 .tornar-index{
+  text-decoration: none;
   color: white;
-  font-size: 25px;
-  margin-left: 25px;
+  transition: color 0.3s;
+  font-size: 40px;
+  margin-top: 200px;
 }
 
 .tornar-index:hover {
-  background-color: rgb(201, 4, 255);
+  color: #e645fe;
 }
 
 .formulari-pujar-cançons{
@@ -705,13 +704,6 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: rgb(201, 4, 255);
-}
-
-.tornar-index {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
 }
 
 /* Estilos generales */

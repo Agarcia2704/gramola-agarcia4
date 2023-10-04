@@ -9,14 +9,16 @@
     <div class="contingut">
         <h1 class="llistat" >LLISTAT DE CANÇONS AFEGIDES:</h1>
         <br>
-        <a href="index.php" class="tornar-index">Tornar a la pàgina principal</a>
         <ul id="lista-canciones">
             <!-- Aquí se mostrarán las canciones -->
             <div class="lletra-llistat">
             <?php
             // Leer todas las canciones del archivo JSON
             $canciones = json_decode(file_get_contents("json/canciones.json"), true);
-
+            $rap = file_get_contents("json/rap.json");
+            $rock = file_get_contents("json/rock.json");
+            $techno =file_get_contents("json/techno.json");
+            $urbano = file_get_contents("json/urbano.json");
             // Iterar sobre las canciones y mostrar cada una en la lista
             foreach ($canciones as $cancion) {
                 echo "<li>";
@@ -31,6 +33,7 @@
             ?>
             </div>
         </ul>
+        <a href="index.php" class="tornar-index2">Tornar a la pàgina principal</a>
     </div>
     <!-- JavaScript -->
     <script>

@@ -45,7 +45,6 @@
         );
 
         $infoPlaylistJSON = json_encode($infoPlaylist);
-        
         //Estableix la coockie amb la informació
         setcookie("lastPlaylist", $infoPlaylistJSON, time() + 3600); // Expira en 1 hora
     }
@@ -68,7 +67,6 @@
 
         </head>
         <body>
-            
             <!-- La secció <body> conté el contingut principal de la pàgina web.-->
             <header>
 
@@ -92,7 +90,6 @@
 
                     </div>
                     <?php endif; ?> 
-                    
                 </div>
 
                 <div class="navegador">
@@ -103,7 +100,6 @@
                     <a href="llista-cançons.php" class="boto-web" >Llista cançons</a>
                     </div>
                     <!-- Video per a la pàgina web -->
-                    
                     <?php endif; ?>
                 <?php if (!$inicisessio): ?>
 
@@ -114,9 +110,9 @@
                         <input class="lletra-form" type="text" name="username" placeholder="Nom d'usuari" required>
                         <button class="lletra-form" type="submit">Enviar</button>
                     </form>
-                </div> 
+                </div>
 
-                <?php endif; ?> 
+                <?php endif; ?>
 
                 </div>
             </header>
@@ -144,7 +140,6 @@
                 <!-- Barra del navegador -->
                 <div class="nav"></div>
             </nav>
-            
             <!-- Script per afegir JavaScript al document -->
             <script>
 
@@ -174,7 +169,6 @@
                     //crida la funció selected i mostrarLlista
                     selected();
                     mostrarLista(song);
-                    
                     let cookie = JSON.parse(getCookie("ultimaplaylist"));
                     let fecha = new Date();
                     let timestamp = fecha.getTime() / 1000;
@@ -214,7 +208,6 @@
                     cookie.fecha[0] = timestamp;
                     document.cookie = "ultimaplaylist=" + JSON.stringify(cookie) + "; expires=Thu, 01 Jan 2024 00:00:00; path=/;";
                 }
-                
             </script>
 
             <footer class="footer">
@@ -222,7 +215,7 @@
                 <!--L'element <footer> conté informació que apareix a la part inferior de la pàgina web-->
                 <div class="reproductor">
 
-                    <!-- Aqui es mostrara l'informació (portada, titol i artista) de cada cançó de cada playlist-->               
+                    <!-- Aqui es mostrara l'informació (portada, titol i artista) de cada cançó de cada playlist-->
                     <div class="text-info">
                     <img src="" alt="" id="cover" hidden>
                         <div class="info">

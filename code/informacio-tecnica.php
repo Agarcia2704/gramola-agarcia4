@@ -21,11 +21,9 @@
 if (isset($_COOKIE['ultimaplaylist'])) {
     // Recupera la cookie y conviértela de nuevo en un objeto JavaScript
     $cookieValue = json_decode($_COOKIE['ultimaplaylist']);
-    
     // Accede a los valores de la cookie
     $nombres = $cookieValue->nombre;
     $timestamps = $cookieValue->fecha;
-    
     // Configura el huso horario a CEST
     date_default_timezone_set('Europe/Madrid');
 
@@ -40,11 +38,9 @@ if (isset($_COOKIE['ultimaplaylist'])) {
 } else {
     echo "La cookie no está configurada.";
 }
-?>        
+?>
                 </p>
-                
             </div>
             <a href="index.php" class="tornar-index2">Tornar a la pàgina principal</a>
         </body>
     </html>
-    
