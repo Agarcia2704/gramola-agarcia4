@@ -41,8 +41,8 @@ function toggleAudio() {
 //funció que actualitza la imatge de play i pausa depentent de si hi ha una cançó posada o no
 function updatePlayButton() {
   reproductor.src = isPlaying
-    ? "img/icones/icone-pausa.png"
-    : "img/icones/icone-play.png";
+    ? "code/img/icones/icone-pausa.png"
+    : "code/img/icones/icone-play.png";
 }
 
 //funció que actualitza la barra de progrès basant-se en el temps actual de reproducció
@@ -73,7 +73,7 @@ function updateDuration() {
 parar.addEventListener("click", () => {
   cancion.pause();
   cancion.currentTime = 0; // Torna al inici
-  reproductor.src = "img/icones/icone-play.png"; // Cambia l'icone a "Play"
+  reproductor.src = "code/img/icones/icone-play.png"; // Cambia l'icone a "Play"
   equalizer.style.display = "none";
 });
 
@@ -92,7 +92,7 @@ cover.removeAttribute("hidden");
 function selected() {
   cancion.src = song[x].url;
   cancion.play();
-  reproductor.src = "img/icones/icone-pausa.png";
+  reproductor.src = "code/img/icones/icone-pausa.png";
   var titol = document.getElementById("titol");
   titol.textContent = song[x].titol;
   var artista = document.getElementById("artista");
@@ -106,29 +106,29 @@ function selected() {
   const enrere = document.getElementById("enrere");
   const avançar = document.getElementById("avançar");
   const parar = document.getElementById("parar");
-  aleatori.src = "img/icones/icone-aleatori.png";
-  enrere.src = "img/icones/icone-enrere.png";
-  avançar.src = "img/icones/icone-avançar.png";
-  parar.src = "img/icones/icone-parar.png";
+  aleatori.src = "code/img/icones/icone-aleatori.png";
+  enrere.src = "code/img/icones/icone-enrere.png";
+  avançar.src = "code/img/icones/icone-avançar.png";
+  parar.src = "code/img/icones/icone-parar.png";
   document.getElementById("aleatori").disabled = false;
   document.getElementById("enrere").disabled = false;
   document.getElementById("avançar").disabled = false;
 
   if (x === 0) {
     //Icone desactivat
-    enrere.src = "img/icones/icone-enrere-desactivat.png";
+    enrere.src = "code/img/icones/icone-enrere-desactivat.png";
     //Icone activat
-    avançar.src = "img/icones/icone-avançar.png";
+    avançar.src = "code/img/icones/icone-avançar.png";
   } else if (x === song.length - 1) {
     //Icone activat
-    enrere.src = "img/icones/icone-enrere.png";
+    enrere.src = "code/img/icones/icone-enrere.png";
     //Icone desactivat
-    avançar.src = "img/icones/icone-avançar-desactivat.png";
+    avançar.src = "code/img/icones/icone-avançar-desactivat.png";
   } else {
     //Icone activat
-    enrere.src = "img/icones/icone-enrere.png";
+    enrere.src = "code/img/icones/icone-enrere.png";
     //Icone activat
-    avançar.src = "img/icones/icone-avançar.png";
+    avançar.src = "code/img/icones/icone-avançar.png";
   }
 }
 

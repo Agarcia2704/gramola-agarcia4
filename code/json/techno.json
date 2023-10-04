@@ -2,25 +2,25 @@
         {
             "titol":"No te puedo perder",
             "artista":"Parkineos",
-            "url":"../playlist/techno/Parkineos-NoTePuedoPerder.mp3",
-            "cover":"../img/cover/parkineos-notepuedoperder.jpg"
+            "url":"code/playlist/techno/Parkineos-NoTePuedoPerder.mp3",
+            "cover":"code/img/cover/parkineos-notepuedoperder.jpg"
         },
         {
             "titol":"Puxero",
             "artista":"Parkineos",
-            "url":"../playlist/techno/Parkineos-Puxero.mp3",
-            "cover":"../img/cover/Parkineos-Puxero.jpg"
+            "url":"code/playlist/techno/Parkineos-Puxero.mp3",
+            "cover":"code/img/cover/Parkineos-Puxero.jpg"
         },
         {
             "titol":"Broken Ties",
             "artista":"The Whistlers",
-            "url":"../playlist/techno/TheWhistlers-BrokenTies.mp3",
-            "cover":"../img/cover/TheWhistlers-BrookenTies.jpg"
+            "url":"code/playlist/techno/TheWhistlers-BrokenTies.mp3",
+            "cover":"code/img/cover/TheWhistlers-BrookenTies.jpg"
         },
         {
             "titol":"Lapaka",
             "artista":"The Whistlers",
-            "url":"../playlist/techno/TheWhistlers-Lapaka.mp3",
-            "cover":"../img/cover/TheWhistlers-Lapaka.jpg"
+            "url":"code/playlist/techno/TheWhistlers-Lapaka.mp3",
+            "cover":"code/img/cover/TheWhistlers-Lapaka.jpg"
         }
 ]

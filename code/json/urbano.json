@@ -2,25 +2,25 @@
         {
             "titol":"Columbia",
             "artista":"Quevedo",
-            "url":"../playlist/urbano/Quevedo-Columbia.mp3",
-            "cover":"../img/cover/Quevedo-Columbia.jpg"
+            "url":"code/playlist/urbano/Quevedo-Columbia.mp3",
+            "cover":"code/img/cover/Quevedo-Columbia.jpg"
         },
         {
             "titol":"Piel de Cordero",
             "artista":"Quevedo",
-            "url":"../playlist/urbano/Quevedo-PieldeCordero.mp3",
-            "cover":"../img/cover/Quevedo-PieldeCordero.jpg"
+            "url":"code/playlist/urbano/Quevedo-PieldeCordero.mp3",
+            "cover":"code/img/cover/Quevedo-PieldeCordero.jpg"
         },
         {
             "titol":"Supernova",
             "artista":"Saiko",
-            "url":"../playlist/urbano/Saiko-Supernova.mp3",
-            "cover":"../img/cover/Saiko-Supernova.jpg"
+            "url":"code/playlist/urbano/Saiko-Supernova.mp3",
+            "cover":"code/img/cover/Saiko-Supernova.jpg"
         },
         {
             "titol":"Antidepresivos",
             "artista":"Saiko",
-            "url":"../playlist/urbano/Saiko-Antidepresivos.mp3",
-            "cover":"../img/cover/Saiko-Antidepresivos.jpg"
+            "url":"code/playlist/urbano/Saiko-Antidepresivos.mp3",
+            "cover":"code/img/cover/Saiko-Antidepresivos.jpg"
         }
 ]
