@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Canciones</title>
+    <title>LLISTA DE CANÇONS</title>
     <link rel="stylesheet" href="css/gramola-css.css">
+    <link rel="icon" type="image/png" href="img/logo/logo-gramola.png">
 </head>
 <body class="body3">
     <div class="contingut">
-        <h1 class="llistat" >LLISTAT DE CANÇONS AFEGIDES:</h1>
+        <h1 class="llistat" >LLISTAT DE CANÇONS AFEGIDES:
+        <a href="../index.php" class="tornar-index2">Tornar a la pàgina principal</a>
+        </h1>
         <br>
         <ul id="lista-canciones">
-            <!-- Aquí se mostrarán las canciones -->
+            <!-- Aquí es mostraran les cançons -->
             <div class="lletra-llistat">
             <?php
-            // Leer todas las canciones del archivo JSON
+            // Llegir totes les cançons de l'arxiu JSON
             $canciones = json_decode(file_get_contents("json/canciones.json"), true);
             $rap = file_get_contents("json/rap.json");
             $rock = file_get_contents("json/rock.json");
-            $techno =file_get_contents("json/techno.json");
+            $techno = file_get_contents("json/techno.json");
             $urbano = file_get_contents("json/urbano.json");
-            // Iterar sobre las canciones y mostrar cada una en la lista
+            // Iterar sobre les cançons i mostrar-ne cadascuna a la llista
             foreach ($canciones as $cancion) {
                 echo "<li>";
                 echo "<a class='cancion' data-url='" . $cancion["url"] . "'>";
@@ -33,72 +36,71 @@
             ?>
             </div>
         </ul>
-        <a href="../index.php" class="tornar-index2">Tornar a la pàgina principal</a>
     </div>
     <!-- JavaScript -->
     <script>
-        // Obtener todos los elementos de enlace en la lista de canciones
+        // Obtenir tots els elements d'enllaç a la llista de cançons
         var linksCanciones = document.querySelectorAll(".cancion");
 
-        // Crear un objeto de audio
+        // Crear un objecte d'àudio
         var reproductor = new Audio();
 
-        // Agregar un controlador de clic a cada enlace de canción
+        // Afegir un controlador de clic a cada enllaç de cançó
         linksCanciones.forEach(function (link) {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
 
-                // Obtener la URL de la canción del atributo "data-url"
+                // Obtenir la URL de la cançó de l'atribut "data-url"
                 var urlCancion = link.getAttribute("data-url");
 
-                // Verificar si la misma canción ya está en reproducción
+                // Comprovar si la mateixa cançó ja està en reproducció
                 if (reproductor.src === urlCancion) {
                     if (reproductor.paused) {
-                        reproductor.play(); // Si está en pausa, reanudar la reproducción
+                        reproductor.play(); // Si està en pausa, reprendre la reproducció
                     } else {
-                        reproductor.pause(); // Si se está reproduciendo, pausar la reproducción
+                        reproductor.pause(); // Si s'està reproduint, pausar la reproducció
                     }
                 } else {
-                    reproductor.src = urlCancion; // Cargar la nueva canción
-                    reproductor.play(); // Reproducir la nueva canción
+                    reproductor.src = urlCancion; // Carregar la nova cançó
+                    reproductor.play(); // Reproduir la nova cançó
                 }
             });
         });
 
-        // Obtener todos los elementos de enlace en la lista de canciones
+        // Obtenir tots els elements d'enllaç a la llista de cançons
         var linksCanciones = document.querySelectorAll(".cancion");
 
-        // Obtener todos los botones de "Parar"
+        // Obtenir tots els botons de "Parar"
         var botonesParar = document.querySelectorAll(".boto-parar");
 
-        // Agregar un controlador de clic a cada enlace de canción
+        // Afegir un controlador de clic a cada enllaç de cançó
         linksCanciones.forEach(function (link) {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
 
-                // Obtener la URL de la canción del atributo "data-url"
+                // Obtenir la URL de la cançó de l'atribut "data-url"
                 var urlCancion = link.getAttribute("data-url");
 
-                // Verificar si la misma canción ya está en reproducción
+                // Comprovar si la mateixa cançó ja està en reproducció
                 if (reproductor.src === urlCancion) {
                     if (reproductor.paused) {
-                        reproductor.play(); // Si está en pausa, reanudar la reproducción
+                        reproductor.play(); // Si està en pausa, reprendre la reproducció
                     } else {
-                        reproductor.pause(); // Si se está reproduciendo, pausar la reproducción
+                        reproductor.pause(); // Si s'està reproduint, pausar la reproducció
                     }
                 } else {
-                    reproductor.src = urlCancion; // Cargar la nueva canción
-                    reproductor.play(); // Reproducir la nueva canción
+                    reproductor.src = urlCancion; // Carregar la nova cançó
+                    reproductor.play(); // Reproduir la nova cançó
                 }
             });
         });
 
-        // Agregar un controlador de clic a cada botón de "Parar"
+        // Afegir un controlador de clic a cada botó de "Parar"
         botonesParar.forEach(function (boton) {
             boton.addEventListener("click", function (e) {
                 e.preventDefault();
 
-                // Pausar la reproducción cuando se haga clic en el botón de "Parar"
+                // Pausar la reproducció quan es faci clic al botó de "Parar"
                 reproductor.pause();
             });
         });
@@ -106,3 +108,4 @@
     <script src="js/gramola-js.js"></script>
 </body>
 </html>
+

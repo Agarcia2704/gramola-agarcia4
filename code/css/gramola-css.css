@@ -9,16 +9,15 @@
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 
-  /* Modifica estilos específicos para elementos en pantallas pequeñas */
+  /* Modifica estils especifics per element en pantallas petites */
   .perfil {
       float: none;
       width: 100%;
   }
 }
 
-/* Estilos para pantallas muy pequeñas (móviles) */
+/* Estils per pantalles molt petites */
 @media screen and (max-width: 480px) {
-  /* Ajusta aún más el diseño para pantallas muy pequeñas */
   .contingut-principal {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
       gap: 10px;
@@ -26,13 +25,13 @@
 }
 
 *{
-    margin:0;
-    padding:0;
-    font-family: 'Skranji', cursive;
+  margin:0;
+  padding:0;
+  font-family: 'Skranji', cursive;
 }
 
 body{
-    background-color: #3D1F54; /* fons de color de la pàgina */
+  background-color: #3D1F54; /* fons de color de la pàgina */
 }
 
 .logo {
@@ -550,12 +549,6 @@ p{
   text-align: center;
 }
 
-.llistat{
-  color: white;
-  margin-top: 25px;
-  margin-left: 25px;
-}
-
 .lletra-llistat{
   color: white;
 }
@@ -741,6 +734,14 @@ input[type="submit"]:hover {
   font-size: 30px;
 }
 
+.llistat{
+  color: white;
+  margin-top: 25px;
+  margin-left: 25px;
+  position: relative;
+  font-size: 40px;
+}
+
 /* Estilos para los enlaces */
 .tornar-index2 {
   text-decoration: none;
@@ -749,6 +750,8 @@ input[type="submit"]:hover {
   font-size: 40px;
   margin-left: 700px;
   margin-top: 200px;
+  margin-bottom: 100px;
+  position: relative;
 }
 
 .tornar-index2:hover {
